@@ -75,7 +75,7 @@ export const getMoodData = async (username) => {
 export const getGeminiSongs = async (emotion) => {
 
   // ⛔ DO NOT expose this in production — move to backend
-  const apiKey = "AIzaSyAYrDENKAAWh3EK6ZFEwuqZttBSU3ZoS5E";
+  const apiKey = "key";
 
   const apiUrl =
     `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`;
