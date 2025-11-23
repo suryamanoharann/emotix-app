@@ -1,0 +1,328 @@
+/* ✅ PROFESSIONAL DARK THEME - NOTHING AESTHETIC */
+
+/* Toast Container - Bottom Right Corner */
+.music-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 
+              0 0 1px rgba(255, 255, 255, 0.1) inset;
+  z-index: 999;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Toast Content - Choices View */
+.toast-content {
+  padding: 16px;
+}
+
+.toast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.toast-title-section {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.toast-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.toast-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f5f5f5;
+  line-height: 1.3;
+}
+
+.toast-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #a0a0a0;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #808080;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  color: #d0d0d0;
+  transform: scale(1.1);
+}
+
+/* Songs List */
+.toast-songs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast-song-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #242424;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #e8e8e8;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 13px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.toast-song-btn:hover {
+  background: #2d2d2d;
+  border-color: #404040;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.toast-song-btn:active {
+  transform: translateX(2px);
+}
+
+.song-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #333333;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0a0a0;
+  flex-shrink: 0;
+}
+
+.song-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #d8d8d8;
+}
+
+.play-icon {
+  font-size: 11px;
+  color: #606060;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toast-song-btn:hover .play-icon {
+  color: #909090;
+}
+
+/* Player View */
+.toast-player {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  min-height: 280px;
+}
+
+.player-back {
+  background: #242424;
+  border: 1px solid #333333;
+  color: #d0d0d0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.player-back:hover {
+  background: #2d2d2d;
+  border-color: #404040;
+}
+
+.player-message {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #d0d0d0;
+  background: #242424;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.player-message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.player-message strong {
+  color: #3b82f6;
+  font-size: 15px;
+  display: inline;
+}
+
+.player-hint {
+  font-size: 12px;
+  color: #808080;
+  margin-top: 12px;
+}
+
+.open-youtube-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  background: #ff0000;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.open-youtube-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.3);
+}
+
+.open-youtube-btn:active {
+  transform: translateY(0);
+}
+
+.player-close {
+  background: #242424;
+  border: 1px solid #333333;
+  color: #d0d0d0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.player-close:hover {
+  background: #2d2d2d;
+  border-color: #404040;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333333;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 512px) {
+  .music-toast {
+    width: calc(100vw - 24px);
+    bottom: 12px;
+    right: 12px;
+    max-width: 100%;
+  }
+
+  .toast-player {
+    min-height: 240px;
+    padding: 12px;
+  }
+
+  .toast-title {
+    font-size: 13px;
+  }
+
+  .toast-subtitle {
+    font-size: 11px;
+  }
+
+  .toast-song-btn {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .song-text {
+    font-size: 12px;
+  }
+
+  .player-message {
+    padding: 1.25rem 1rem;
+  }
+
+  .player-message strong {
+    font-size: 14px;
+  }
+
+  .open-youtube-btn {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
